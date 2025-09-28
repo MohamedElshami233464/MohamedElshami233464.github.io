@@ -46,7 +46,7 @@
     h2{margin:0 0 12px; font-size:20px}
     .muted{color:var(--muted)}
     .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
-    .chip{background:var(--tag); border:1px solid rgba(255,255,255,.08); color:var(--text); padding:6px 10px; border-radius:999px; font-size:12px}
+    .chip{background:var(--tag); border:1px solid rgba(255,255,255,.08); color:var(--text); padding:6px 10px; border-radius:999px; font-size:12px; white-space:nowrap}
     .grid{display:grid; gap:16px}
     .grid.cols-3{grid-template-columns: repeat(3, 1fr)}
     .grid.cols-2{grid-template-columns: repeat(2, 1fr)}
@@ -56,7 +56,7 @@
     .project .badge{min-width:34px; height:34px; border-radius:10px; background:var(--chip); display:grid; place-items:center; font-family:var(--mono); font-size:12px}
     .project h3{margin:0 0 4px; font-size:16px}
     .project p{margin:0; color:var(--muted); font-size:14px}
-    .project .meta{display:flex; gap:8px; margin-top:8px}
+    .project .meta{display:flex; gap:8px; margin-top:8px; flex-wrap:wrap}
     .link{color:#93c5fd}
     footer{margin-top:36px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; color:var(--muted); font-size:13px}
     .pill{padding:6px 10px; border-radius:999px; border:1px dashed rgba(255,255,255,.2)}
@@ -115,6 +115,18 @@
             </div>
           </div>
         </article>
+        <article class="project">
+          <div class="badge">BI</div>
+          <div>
+            <h3>SDG No Poverty — Female Poverty Analytics Dashboard</h3>
+            <p>Interactive dashboard for United Nations SDG 1 (No Poverty) focused on regional <strong>female poverty</strong> rates. Defined a research question, sourced and cleaned datasets, ran EDA in Python/Power BI, and used simple linear regression to explain relationships across the $1.90 / $3.20 / $5.50 thresholds. Delivered a multi‑page Power BI report (Intro → EDA → Findings → Discussion → Conclusion) with maps, box plots, and navigation buttons to communicate insights and recommendations.</p>
+            <div class="meta">
+              <span class="chip">Power BI</span><span class="chip">Python</span><span class="chip">EDA</span><span class="chip">Data Cleaning</span><span class="chip">Data Viz</span><span class="chip">Linear Regression</span><span class="chip">CRISP‑DM</span>
+              <a class="link" href="#" target="_blank" rel="noopener">Dashboard</a>
+              <a class="link" href="#" target="_blank" rel="noopener">Case study</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -124,19 +136,32 @@
         <div>
           <p class="muted"><strong>Languages & Tools</strong></p>
           <div class="chips">
-            <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Git</span>
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Git</span>
           </div>
         </div>
         <div>
           <p class="muted"><strong>ML & Data</strong></p>
           <div class="chips">
-            <span class="chip">Scikit-learn</span><span class="chip">PyTorch</span><span class="chip">TensorFlow/Keras</span><span class="chip">Pandas</span>
+            <span class="chip">Scikit-learn</span>
+            <span class="chip">PyTorch</span>
+            <span class="chip">TensorFlow/Keras</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">EDA</span>
+            <span class="chip">Data Cleaning</span>
+            <span class="chip">Linear Regression</span>
+            <span class="chip">CRISP-DM</span>
           </div>
         </div>
         <div>
           <p class="muted"><strong>Ops & Visualization</strong></p>
           <div class="chips">
-            <span class="chip">Docker</span><span class="chip">FastAPI</span><span class="chip">Azure ML</span><span class="chip">Power BI</span>
+            <span class="chip">Docker</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">Azure ML</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Data Visualization</span>
           </div>
         </div>
       </div>
