@@ -172,7 +172,7 @@ const Index = () => {
           Mohamed Elshami | <span className="text-gradient">Data Science & AI Student</span>
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Focused on NLP, Computer Vision, and MLOps
+          Building AI solutions through NLP, Computer Vision, and Data Analytics projects.
         </p>
       </section>
 
