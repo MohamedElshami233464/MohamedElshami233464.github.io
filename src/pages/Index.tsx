@@ -15,9 +15,15 @@ import {
   TrendingUp,
   MessageSquare,
   FileText,
-  Sparkles
+  Sparkles,
+  ExternalLink
 } from "lucide-react";
-import profileImage from "@/assets/profile.jpg";
+import rootPredictionImg from "@/assets/projects/root-prediction.jpg";
+import emotionClassificationImg from "@/assets/projects/emotion-classification.jpg";
+import sdgPovertyImg from "@/assets/projects/sdg-poverty.jpg";
+import footballAnalyticsImg from "@/assets/projects/football-analytics.jpg";
+import imageClassifierImg from "@/assets/projects/image-classifier.jpg";
+import roadSafetyImg from "@/assets/projects/road-safety.jpg";
 
 const Index = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -52,7 +58,9 @@ const Index = () => {
       icon: Sparkles,
       tags: ["U-Net", "PyTorch", "RL", "Kaggle"],
       gradient: "from-cyan-500 to-blue-500",
-      badge: "CV"
+      badge: "CV",
+      image: rootPredictionImg,
+      github: "https://github.com/MohamedElshami233464"
     },
     {
       title: "Building a Pipeline for Emotion Classification",
@@ -60,7 +68,9 @@ const Index = () => {
       icon: MessageSquare,
       tags: ["Whisper", "AssemblyAI", "LogReg", "LSTM", "Transformers"],
       gradient: "from-blue-500 to-cyan-500",
-      badge: "NLP"
+      badge: "NLP",
+      image: emotionClassificationImg,
+      github: "https://github.com/MohamedElshami233464"
     },
     {
       title: "SDG No Poverty — Female Poverty Analytics Dashboard",
@@ -68,7 +78,9 @@ const Index = () => {
       icon: TrendingUp,
       tags: ["Power BI", "Python", "EDA", "Data Cleaning", "Data Viz", "Linear Regression", "CRISP-DM"],
       gradient: "from-purple-500 to-pink-500",
-      badge: "BI"
+      badge: "BI",
+      image: sdgPovertyImg,
+      github: "https://github.com/MohamedElshami233464"
     },
     {
       title: "Football Data Analytics for NAC Breda",
@@ -76,7 +88,9 @@ const Index = () => {
       icon: Database,
       tags: ["Python", "Scikit-learn", "XGBoost", "Random Forest", "Linear Regression", "EDA", "Feature Engineering"],
       gradient: "from-indigo-500 to-purple-500",
-      badge: "DS"
+      badge: "DS",
+      image: footballAnalyticsImg,
+      github: "https://github.com/MohamedElshami233464"
     },
     {
       title: "Image Classifier App",
@@ -84,7 +98,9 @@ const Index = () => {
       icon: Sparkles,
       tags: ["TensorFlow/Keras", "CNN", "VGG16", "Transfer Learning", "XAI", "Fairness", "A/B Testing", "CRISP-DM"],
       gradient: "from-pink-500 to-rose-500",
-      badge: "CV"
+      badge: "CV",
+      image: imageClassifierImg,
+      github: "https://github.com/MohamedElshami233464"
     },
     {
       title: "Road Safety Risk Prediction – Breda",
@@ -92,7 +108,9 @@ const Index = () => {
       icon: Brain,
       tags: ["Python", "SQL", "Scikit-learn", "Random Forest", "Decision Trees", "DNN", "K-Means", "SMOTE", "XAI"],
       gradient: "from-violet-500 to-purple-500",
-      badge: "AI"
+      badge: "AI",
+      image: roadSafetyImg,
+      github: "https://github.com/MohamedElshami233464"
     }
   ];
 
@@ -150,30 +168,21 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 text-center observe">
-        <div className="mb-8 inline-block">
-          <img
-            src={profileImage}
-            alt="Mohamed Elshami"
-            className="w-40 h-40 rounded-full mx-auto border-4 border-primary glow-primary hover:scale-105 hover:glow-accent transition-all duration-300"
-          />
-        </div>
-        <h2 className="text-5xl md:text-6xl font-bold mb-4 text-gradient">
-          Applied Data Science & AI
-        </h2>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Mohamed Elshami | <span className="text-gradient">Data Science & AI Student</span>
+        </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          BUas • NLP • Computer Vision • MLOps
+          Focused on NLP, Computer Vision, and MLOps
         </p>
       </section>
 
       {/* About Section */}
       <section id="about" className="container mx-auto px-4 py-20 observe">
         <div className="max-w-3xl mx-auto">
-          <h3 className="text-3xl font-bold mb-8 text-center">About Me</h3>
+          <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
           <Card className="glass hover-lift p-8">
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Motivated and passionate Data Science and AI student at Breda University of Applied Sciences. 
-              Experienced in NLP, Computer Vision, and MLOps through academic and group projects. 
-              Currently seeking an internship to apply technical expertise and contribute to real-world AI solutions.
+              I'm a third-year student in the Applied Data Science and Artificial Intelligence program at Breda University of Applied Sciences (BUas). I specialize in NLP, Computer Vision, and MLOps through academic and group projects. I'm currently looking for a full-time (36–40 hours/week) internship starting February 2026 to apply my technical skills and contribute to real-world AI projects.
             </p>
             <div className="flex gap-3 flex-wrap">
               <Badge className="glass gap-2 px-4 py-2">
@@ -195,36 +204,46 @@ const Index = () => {
 
       {/* Projects Section */}
       <section id="projects" className="container mx-auto px-4 py-20 observe">
-        <h3 className="text-3xl font-bold mb-12 text-center">Featured Projects</h3>
+        <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (
               <Card 
                 key={index} 
-                className="glass hover-lift p-6 group cursor-pointer"
+                className="glass hover-lift overflow-hidden group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex gap-4 mb-4">
-                  <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${project.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className={`absolute top-4 left-4 w-14 h-14 rounded-lg bg-gradient-to-br ${project.gradient} flex items-center justify-center shadow-lg`}>
                     <span className="text-white font-mono font-bold text-sm">{project.badge}</span>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-semibold mb-1">{project.title}</h4>
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${project.gradient} flex items-center justify-center opacity-20`}>
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
                 </div>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, i) => (
-                    <Badge key={i} variant="secondary" className="text-xs">
-                      {tag}
-                    </Badge>
-                  ))}
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, i) => (
+                      <Badge key={i} variant="secondary" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                  <Button 
+                    variant="outline" 
+                    className="w-full glass hover:bg-primary/20 gap-2"
+                    onClick={() => window.open(project.github, '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    View Project
+                  </Button>
                 </div>
               </Card>
             );
@@ -234,7 +253,7 @@ const Index = () => {
 
       {/* Skills Section */}
       <section id="skills" className="container mx-auto px-4 py-20 observe">
-        <h3 className="text-3xl font-bold mb-12 text-center">Skills & Technologies</h3>
+        <h2 className="text-3xl font-bold mb-12 text-center">Skills & Technologies</h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {Object.entries(skills).map(([category, items]) => (
             <Card key={category} className="glass p-6">
@@ -261,7 +280,7 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="container mx-auto px-4 py-20 observe">
         <div className="max-w-2xl mx-auto text-center">
-          <h3 className="text-3xl font-bold mb-6">Let's Connect</h3>
+          <h2 className="text-3xl font-bold mb-6">Let's Connect</h2>
           <p className="text-muted-foreground mb-8">
             Open to AI/Data internships in the Netherlands and EU. The fastest way is email.
           </p>
