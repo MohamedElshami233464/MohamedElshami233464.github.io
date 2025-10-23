@@ -91,7 +91,7 @@ const Index = () => {
       gradient: "from-indigo-500 to-purple-500",
       badge: "DS",
       image: footballAnalyticsImg,
-      github: "https://github.com/MohamedElshami233464/portfolio"
+      github: "https://github.com/MohamedElshami233464/portfolio/tree/main/NAC-breda-player-analytics"
     },
     {
       title: "Image Classifier App",
