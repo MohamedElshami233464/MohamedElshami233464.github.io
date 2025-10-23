@@ -2,11 +2,11 @@ import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { 
-  Mail, 
-  Linkedin, 
-  Github, 
-  MapPin, 
+import {
+  Mail,
+  Linkedin,
+  Github,
+  MapPin,
   Languages,
   Brain,
   Database,
@@ -14,7 +14,6 @@ import {
   BarChart3,
   TrendingUp,
   MessageSquare,
-  FileText,
   Sparkles,
   ExternalLink
 } from "lucide-react";
@@ -32,9 +31,7 @@ const Index = () => {
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
-          }
+          if (entry.isIntersecting) entry.target.classList.add("fade-in");
         });
       },
       { threshold: 0.1 }
@@ -54,7 +51,8 @@ const Index = () => {
   const projects = [
     {
       title: "Predicting Root Length for Plants",
-      description: "Built a computer vision pipeline to segment roots from plant images and predict primary root length. Annotated training data, trained a U-Net model, and applied reinforcement learning and PID control for robotic inoculation. Competed in a Kaggle challenge to optimize performance.",
+      description:
+        "Built a computer vision pipeline to segment roots from plant images and predict primary root length. Annotated training data, trained a U-Net model, and applied reinforcement learning and PID control for robotic inoculation. Competed in a Kaggle challenge to optimize performance.",
       icon: Sparkles,
       tags: ["U-Net", "PyTorch", "RL", "Kaggle"],
       gradient: "from-cyan-500 to-blue-500",
@@ -64,7 +62,8 @@ const Index = () => {
     },
     {
       title: "Building a Pipeline for Emotion Classification",
-      description: "Developed an NLP pipeline to detect emotions from video transcripts using machine learning models. Used Whisper and AssemblyAI for transcription, trained and compared Logistic Regression, LSTM, and Transformer models, and integrated translation, prompt engineering, and explainability techniques (XAI).",
+      description:
+        "Developed an NLP pipeline to detect emotions from video transcripts using machine learning models. Used Whisper and AssemblyAI for transcription, trained and compared Logistic Regression, LSTM, and Transformer models, and integrated translation, prompt engineering, and explainability techniques (XAI).",
       icon: MessageSquare,
       tags: ["Whisper", "AssemblyAI", "LogReg", "LSTM", "Transformers"],
       gradient: "from-blue-500 to-cyan-500",
@@ -74,7 +73,8 @@ const Index = () => {
     },
     {
       title: "SDG No Poverty — Female Poverty Analytics Dashboard",
-      description: "Interactive dashboard for United Nations SDG 1 (No Poverty) focused on regional female poverty rates. Defined a research question, sourced and cleaned datasets, ran EDA in Python/Power BI, and used simple linear regression to explain relationships across the $1.90 / $3.20 / $5.50 thresholds. Delivered a multi-page Power BI report with maps, box plots, and navigation buttons to communicate insights and recommendations.",
+      description:
+        "Interactive dashboard for United Nations SDG 1 (No Poverty) focused on regional female poverty rates. Defined a research question, sourced and cleaned datasets, ran EDA in Python/Power BI, and used simple linear regression to explain relationships across the $1.90 / $3.20 / $5.50 thresholds. Delivered a multi-page Power BI report with maps, box plots, and navigation buttons to communicate insights and recommendations.",
       icon: TrendingUp,
       tags: ["Power BI", "Python", "EDA", "Data Cleaning", "Data Viz", "Linear Regression", "CRISP-DM"],
       gradient: "from-purple-500 to-pink-500",
@@ -84,7 +84,8 @@ const Index = () => {
     },
     {
       title: "Football Data Analytics for NAC Breda",
-      description: "End-to-end data science project with NAC Breda football club. Cleaned and preprocessed large player datasets (16k+ rows, 100+ features), ran EDA on market value, goals, contracts, and engineered features (correlation, SelectKBest). Trained and compared ML models — Linear/Logistic Regression, Random Forest, Gradient Boosting, XGBoost, and K-Means — and evaluated with MSE/MAE/R²/Accuracy. Final deliverables included a linear regression baseline for market value, clustering insights for recruitment, and regression-from-scratch with gradient descent.",
+      description:
+        "End-to-end data science project with NAC Breda football club. Cleaned and preprocessed large player datasets (16k+ rows, 100+ features), ran EDA on market value, goals, contracts, and engineered features (correlation, SelectKBest). Trained and compared ML models — Linear/Logistic Regression, Random Forest, Gradient Boosting, XGBoost, and K-Means — and evaluated with MSE/MAE/R²/Accuracy. Final deliverables included a linear regression baseline for market value, clustering insights for recruitment, and regression-from-scratch with gradient descent.",
       icon: Database,
       tags: ["Python", "Scikit-learn", "XGBoost", "Random Forest", "Linear Regression", "EDA", "Feature Engineering"],
       gradient: "from-indigo-500 to-purple-500",
@@ -94,7 +95,8 @@ const Index = () => {
     },
     {
       title: "Image Classifier App",
-      description: "Developed a deep learning application to classify fruit images into fresh vs. rotten apples/bananas (4 classes, ~200–300 images per class). Followed the CRISP-DM framework, incorporating market and consumer research, risk assessment, and prototype design. Implemented MLP and CNN baselines, and achieved 97.3% test accuracy with a VGG16 transfer learning model and data augmentation. Addressed dataset bias (class imbalance, color sensitivity) with fairness-through-awareness techniques, and applied explainability methods to highlight decision regions. Conducted user testing (think-aloud and A/B studies) and delivered a user-centered demo.",
+      description:
+        "Developed a deep learning application to classify fruit images into fresh vs. rotten apples/bananas (4 classes, ~200–300 images per class). Followed the CRISP-DM framework, incorporating market and consumer research, risk assessment, and prototype design. Implemented MLP and CNN baselines, and achieved 97.3% test accuracy with a VGG16 transfer learning model and data augmentation. Addressed dataset bias (class imbalance, color sensitivity) with fairness-through-awareness techniques, and applied explainability methods to highlight decision regions. Conducted user testing (think-aloud and A/B studies) and delivered a user-centered demo.",
       icon: Sparkles,
       tags: ["TensorFlow/Keras", "CNN", "VGG16", "Transfer Learning", "XAI", "Fairness", "A/B Testing", "CRISP-DM"],
       gradient: "from-pink-500 to-rose-500",
@@ -104,7 +106,8 @@ const Index = () => {
     },
     {
       title: "Road Safety Risk Prediction – Breda",
-      description: "Client project with ANWB to improve road safety in Breda by predicting danger zones. Integrated datasets from ANWB (driver behavior), KNMI (rainfall), and Open-Meteo (weather) to classify streets into low, mid, or high risk levels. Performed preprocessing (feature engineering, normalization, outlier handling, SMOTE), then trained and compared models including Decision Trees, Random Forest, K-Means clustering, and Deep Neural Networks. Achieved up to 98.8% accuracy with Random Forest and DNN. Delivered a prototype interface with alerts for risky road segments, aligning with EU AI Act and GDPR requirements.",
+      description:
+        "Client project with ANWB to improve road safety in Breda by predicting danger zones. Integrated datasets from ANWB (driver behavior), KNMI (rainfall), and Open-Meteo (weather) to classify streets into low, mid, or high risk levels. Performed preprocessing (feature engineering, normalization, outlier handling, SMOTE), then trained and compared models including Decision Trees, Random Forest, K-Means clustering, and Deep Neural Networks. Achieved up to 98.8% accuracy with Random Forest and DNN. Delivered a prototype interface with alerts for risky road segments, aligning with EU AI Act and GDPR requirements.",
       icon: Brain,
       tags: ["Python", "SQL", "Scikit-learn", "Random Forest", "Decision Trees", "DNN", "K-Means", "SMOTE", "XAI"],
       gradient: "from-violet-500 to-purple-500",
@@ -209,21 +212,27 @@ const Index = () => {
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="glass hover-lift overflow-hidden group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className={`absolute top-4 left-4 w-14 h-14 rounded-lg bg-gradient-to-br ${project.gradient} flex items-center justify-center shadow-lg`}>
+                  {/* Dark gradient overlay (always on; slightly stronger on hover) */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent group-hover:from-black/70 group-hover:via-black/35 transition-colors duration-300"></div>
+
+                  <div
+                    className={`absolute top-4 left-4 w-14 h-14 rounded-lg bg-gradient-to-br ${project.gradient} flex items-center justify-center shadow-lg`}
+                  >
                     <span className="text-white font-mono font-bold text-sm">{project.badge}</span>
                   </div>
                 </div>
+
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                   <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
@@ -236,10 +245,10 @@ const Index = () => {
                       </Badge>
                     ))}
                   </div>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="w-full glass hover:bg-primary/20 gap-2"
-                    onClick={() => window.open(project.github, '_blank')}
+                    onClick={() => window.open(project.github, "_blank")}
                   >
                     <ExternalLink className="w-4 h-4" />
                     View Project
@@ -262,8 +271,8 @@ const Index = () => {
                 {items.map((skill, index) => {
                   const Icon = skill.icon;
                   return (
-                    <Badge 
-                      key={index} 
+                    <Badge
+                      key={index}
                       className="glass gap-2 px-3 py-2 hover:bg-primary/20 hover:scale-105 transition-all cursor-pointer"
                     >
                       <Icon className="w-4 h-4" />
@@ -285,28 +294,28 @@ const Index = () => {
             Open to AI/Data internships in the Netherlands and EU. The fastest way is email.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="gradient-primary hover:opacity-90 gap-2 glow-primary"
-              onClick={() => window.location.href = 'mailto:melshami909@gmail.com'}
+              onClick={() => (window.location.href = "mailto:melshami909@gmail.com")}
             >
               <Mail className="w-5 h-5" />
               melshami909@gmail.com
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="glass hover:bg-primary/20 gap-2"
-              onClick={() => window.open('https://www.linkedin.com/in/mohamed-elshami', '_blank')}
+              onClick={() => window.open("https://www.linkedin.com/in/mohamed-elshami", "_blank")}
             >
               <Linkedin className="w-5 h-5" />
               LinkedIn
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="glass hover:bg-primary/20 gap-2"
-              onClick={() => window.open('https://github.com/MohamedElshami233464', '_blank')}
+              onClick={() => window.open("https://github.com/MohamedElshami233464", "_blank")}
             >
               <Github className="w-5 h-5" />
               GitHub
