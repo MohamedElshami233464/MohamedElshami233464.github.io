@@ -60,7 +60,7 @@ const Index = () => {
       gradient: "from-cyan-500 to-blue-500",
       badge: "CV",
       image: rootPredictionImg,
-      github: "https://github.com/MohamedElshami233464"
+      github: "https://github.com/MohamedElshami233464/portfolio"
     },
     {
       title: "Building a Pipeline for Emotion Classification",
@@ -70,7 +70,7 @@ const Index = () => {
       gradient: "from-blue-500 to-cyan-500",
       badge: "NLP",
       image: emotionClassificationImg,
-      github: "https://github.com/MohamedElshami233464"
+      github: "https://github.com/MohamedElshami233464/portfolio"
     },
     {
       title: "SDG No Poverty — Female Poverty Analytics Dashboard",
@@ -80,7 +80,7 @@ const Index = () => {
       gradient: "from-purple-500 to-pink-500",
       badge: "BI",
       image: sdgPovertyImg,
-      github: "https://github.com/MohamedElshami233464"
+      github: "https://github.com/MohamedElshami233464/portfolio/tree/main/sdg1-female-poverty-dashboard"
     },
     {
       title: "Football Data Analytics for NAC Breda",
@@ -90,7 +90,7 @@ const Index = () => {
       gradient: "from-indigo-500 to-purple-500",
       badge: "DS",
       image: footballAnalyticsImg,
-      github: "https://github.com/MohamedElshami233464"
+      github: "https://github.com/MohamedElshami233464/portfolio"
     },
     {
       title: "Image Classifier App",
@@ -100,7 +100,7 @@ const Index = () => {
       gradient: "from-pink-500 to-rose-500",
       badge: "CV",
       image: imageClassifierImg,
-      github: "https://github.com/MohamedElshami233464"
+      github: "https://github.com/MohamedElshami233464/portfolio"
     },
     {
       title: "Road Safety Risk Prediction – Breda",
@@ -110,7 +110,7 @@ const Index = () => {
       gradient: "from-violet-500 to-purple-500",
       badge: "AI",
       image: roadSafetyImg,
-      github: "https://github.com/MohamedElshami233464"
+      github: "https://github.com/MohamedElshami233464/portfolio"
     }
   ];
 
