@@ -58,7 +58,7 @@ const Index = () => {
       gradient: "from-cyan-500 to-blue-500",
       badge: "CV",
       image: rootPredictionImg,
-      github: "https://github.com/MohamedElshami233464/portfolio"
+      github: "https://github.com/MohamedElshami233464/portfolio/tree/main/root-length-prediction"
     },
     {
       title: "Building a Pipeline for Emotion Classification",
@@ -69,7 +69,7 @@ const Index = () => {
       gradient: "from-blue-500 to-cyan-500",
       badge: "NLP",
       image: emotionClassificationImg,
-      github: "https://github.com/MohamedElshami233464/portfolio"
+      github: "https://github.com/MohamedElshami233464/portfolio/tree/main/emotion-classification-pipeline"
     },
     {
       title: "SDG No Poverty — Female Poverty Analytics Dashboard",
@@ -102,7 +102,7 @@ const Index = () => {
       gradient: "from-pink-500 to-rose-500",
       badge: "CV",
       image: imageClassifierImg,
-      github: "https://github.com/MohamedElshami233464/portfolio"
+      github: "https://github.com/MohamedElshami233464/portfolio/tree/main/image-classification-app"
     },
     {
       title: "Road Safety Risk Prediction – Breda",
@@ -113,7 +113,7 @@ const Index = () => {
       gradient: "from-violet-500 to-purple-500",
       badge: "AI",
       image: roadSafetyImg,
-      github: "https://github.com/MohamedElshami233464/portfolio"
+      github: "https://github.com/MohamedElshami233464/portfolio/tree/main/ANWB-road-safety-risk-prediction"
     }
   ];
 
